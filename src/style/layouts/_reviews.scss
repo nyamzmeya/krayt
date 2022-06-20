@@ -1,0 +1,51 @@
+.reviews {
+    overflow: hidden;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end;
+        margin-bottom: 56px;
+        @include media-tablet {
+            margin-bottom: 30px;
+        }
+    }
+    h2 {
+        max-width: 400px;
+    }
+
+    &__slider {
+        margin-bottom: 32px;
+        &__item {
+            background-color: $color-primary;
+            margin-right: 30px;
+            box-sizing: border-box;
+            height: 393px;
+            width: 445px;
+            padding: 47px 40px 35px 40px;
+            color: $color-white;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: $font-lato;
+            @include font($height: 2.6rem, $size: 1.6rem, $weight: 400);
+            @include media-tablet {
+                height: 300px;
+                padding: 30px;
+            }
+            @include media-mobile {
+                width: 100%;
+            }
+            &__photo {
+                display: flex;
+                column-gap: 16px;
+            }
+
+            span {
+                @include font($height: 2.8rem, $size: 1.8rem, $weight: 700);
+                margin-bottom: 4px;
+                display: block;
+            }
+        }
+
+    }
+}

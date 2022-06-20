@@ -1,0 +1,61 @@
+.help {
+
+    h2 {
+        margin: 0px auto 51px auto;
+    }
+
+    &__boxes {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 64px;
+        @include media-tablet {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        &__box {
+            box-sizing: border-box;
+            text-align: center;
+            width: 350px;
+            height: 174px;
+            padding: 45px 40px;
+            font-family: $font-lora;
+            @include font($height: 3.3rem, $size: 2.6rem, $weight: 400);
+            color: #000000;
+            box-shadow: 4px 4px 23px -10px rgba(112, 112, 112, 0.5);
+            position: relative;
+            @include media-tablet {
+                width: fit-content;
+                height: auto;
+                padding: 20px 40px;
+            }
+
+            button {
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                width: 64px;
+                box-shadow: 4px 4px 23px -10px rgba(112, 112, 112, 0.5);
+            }
+        }
+    }
+
+    .link_orange {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.orange {
+    background-color: $color-orange;
+    color: $color-white;
+
+    button {
+        background-color: $color-white;
+    }
+}

@@ -1,0 +1,55 @@
+.facilities {
+    &__main {
+        display: flex;
+        margin-top: 60px;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            @media screen and (max-width: 768px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                row-gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            button {
+                text-align: left;
+                padding: 24px;
+                width: 293px;
+                box-sizing: border-box;
+                @include font($height: 2.4rem, $size: 2rem, $weight: 700);
+                @media screen and (max-width: 768px) {
+                    width: 50%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__slider {
+        width: 66%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            
+        }
+
+        .flickity-cell {
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @include media-laptop-2 {}
+    }
+}

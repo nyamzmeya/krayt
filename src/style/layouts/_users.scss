@@ -1,0 +1,44 @@
+.users {
+    
+    h2 {
+        text-align: center;
+        margin: 0px auto 24px auto;
+    }
+    &__subheading {
+        font-family: $font-lato;
+        font-size: 18px;
+        @include font($size: 1.8rem, $height: 2.8rem, $weight: 500);
+        color: $color-grey-1;
+        text-align: center;
+        margin-bottom: 63px;
+    }
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 110%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        @include media-laptop-1 {
+            width: 100%;
+        }
+        @include media-laptop-2 {
+            flex-wrap: wrap;
+            row-gap: 30px;
+            div {
+                width: 33%;
+                @include media-tablet {
+                    width: 50%;
+                }
+                @include media-mobile {
+                    width: 100%;
+                }
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

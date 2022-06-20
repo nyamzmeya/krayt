@@ -1,0 +1,98 @@
+.why {
+   
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include media-laptop-2 {
+            column-gap:30px;
+        }
+        @include media-tablet {
+            display: block;
+        }
+    }
+
+    &__icons {
+        margin-top: 36px;
+        display: flex;
+        max-width: 500px;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        justify-content: space-between;
+        @include media-laptop-2 {
+            max-width: 400px;
+        }
+        @include media-tablet {
+            max-width: fit-content;
+            margin-bottom: 30px;
+            row-gap: 30px;
+        }
+
+        &__icon {
+            display: flex;
+            column-gap: 24px;
+            width: 41%;
+            height: 75px;
+            @include media-tablet {
+                width: 30%;
+                height: auto;
+                column-gap:none;
+                justify-content: space-evenly;
+            }
+            img {
+                height: 32px;
+                @include media-mobile {
+                    height: 24px;
+                }
+            }
+        }
+
+        &__text {
+            font-family: $font-lato;
+            color: $color-grey-1;
+            @include font($size: 1.6rem, $height: 2.6rem, $weight: 400);
+
+            span {
+                display: block;
+                margin-bottom: 10px;
+                font-family: $font-lora;
+                color: $color-primary;
+                @include media-tablet {
+                    margin-bottom: 0px;
+                }
+                @include font($size: 3.2rem, $height: 4.1rem, $weight: 400);
+                @include media-mobile {
+                    @include font($size: 1.8rem, $height: 2rem, $weight: 400);
+                }
+            }
+        }
+    }
+
+    &__card {
+        background-color: $color-primary;
+        color: $color-white;
+        max-width: 540px;
+        box-sizing: border-box;
+        padding: 53px;
+        @include media-laptop-2 {
+            flex: 1;
+        }
+        @include media-tablet {
+            max-width: fit-content;
+            padding: 30px;
+        }
+        h2 {
+            color: $color-white;
+            margin-bottom: 24px;
+        }
+        h3 {
+            color: $color-white;
+        }
+        hr {
+            background-color: $color-white;
+        }
+        div {
+            font-family: $font-lato;
+            @include font($size: 2rem, $height: 3rem, $weight: 500);
+        }
+    }
+}

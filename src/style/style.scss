@@ -1,0 +1,26 @@
+@import "../../node_modules/flickity/dist/flickity.min.css";
+@import "../../node_modules/flickity-fade/flickity-fade.css";
+
+
+@import "base/constants";
+@import "base/mixins";
+@import "base/base";
+
+
+
+
+@import "layouts/header";
+@import "layouts/intro";
+@import "layouts/spaces";
+@import "layouts/_why";
+@import "layouts/_facilities";
+@import "layouts/gallery";
+@import "layouts/_users";
+@import "layouts/reviews";
+@import "layouts/help";
+@import "layouts/news";
+@import "layouts/footer";
+
+
+
+
